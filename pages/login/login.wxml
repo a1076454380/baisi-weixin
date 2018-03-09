@@ -1,0 +1,30 @@
+<loading hidden="{{!loading}}">
+    登陆中
+</loading>
+<view class='avatar' bindtap='imgcheck'>
+    <image src='{{avatarUrl}}'></image>
+</view> 
+<view class='name' bindtap='login'>
+    {{nickName}}
+</view>
+<view class='content'>
+    <view class='title'>
+        工具箱
+    </view>
+    <view class='content-item' bindtap='Lyin'>
+        录音机
+    </view> 
+    <view class='content-item' bindtap='Ewei'>
+        二维码
+    </view> 
+    <view class='content-item' bindtap='iphone'>
+        拨打我的电话
+    </view> 
+    <view class='content-item' bindtap='Map'>
+        地图导航
+    </view> 
+    <view class='content-item' bindtap='Map'>
+        敬请期待
+    </view> 
+</view>
+<modal hidden="{{hidden}}" title="{{Tchuan}}" confirm-text="确定" bindconfirm="cancel"no-cancel="true"></modal>

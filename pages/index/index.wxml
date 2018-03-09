@@ -1,0 +1,51 @@
+<loading hidden="{{!loading}}">
+    加载中
+</loading>
+<view class="topnav">
+    <view class="nav-item {{num==''?'nav-active':''}}" data-typ='' bindtap='navTap'>
+        全部
+    </view>
+    <view class="nav-item {{num==10?'nav-active':''}}" data-typ='10' bindtap='navTap'>
+        图片
+    </view>
+    <view class="nav-item {{num==29?'nav-active':''}}" data-typ='29' bindtap='navTap'>
+        段子
+    </view>
+    <view class="nav-item {{num==31?'nav-active':''}}" data-typ='31' bindtap='navTap'>
+        声音
+    </view>
+    <view class="nav-item {{num==41?'nav-active':''}}" data-typ='41' bindtap='navTap'>
+        视频
+    </view>
+</view>
+<view class='content'>
+    <view class='content-item' wx:for="{{content}}" wx:key="item">
+         <view class='user'>
+            <view class='user-avatar'>
+              <image src='{{item.profile_image}}'></image>
+            </view>
+            <view class='user-name'>
+                {{item.name}}
+            </view>
+         </view>
+         <view class='main'>
+              <view class='main-text' wx:if="{{item.text}}">
+                  {{item.text}}
+              </view>
+              <view class='main-mp3' wx:if="{{item.voice_uri}}">
+                <audio src='{{item.voice_uri}}' controls="true">
+                
+                </audio>   
+              </view>
+              <view class='main-images' wx:if="{{item.cdn_img}}">
+                  <image src='{{item.cdn_img}}' mode='widthFix'></image>
+              </view>
+              <view class='main-video' wx:if="{{item.video_uri}}">
+                  <video src="{{item.video_uri}}"   controls="true" ></video>
+              </view>
+              <view class='data'>
+                  {{item.create_time}}
+              </view>
+         </view>
+    </view>
+</view>
