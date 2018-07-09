@@ -10,7 +10,7 @@ Page({
     content:'',
     loading:true,
     page:1,
-    apiUrl:'http://route.showapi.com/255-1?showapi_appid=48591&showapi_sign=62f2d8f1a027431f823d43f7fc675b42'
+    apiUrl:'https://route.showapi.com/255-1?showapi_appid=48591&showapi_sign=62f2d8f1a027431f823d43f7fc675b42'
   },
 
   /**

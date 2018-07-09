@@ -29,6 +29,9 @@
             </view>
          </view>
          <view class='main'>
+              <view class='main-images' wx:if="{{item.cdn_img}}">
+                  <image src='{{item.cdn_img}}' mode='widthFix'></image>
+              </view>
               <view class='main-text' wx:if="{{item.text}}">
                   {{item.text}}
               </view>
@@ -36,9 +39,6 @@
                 <audio src='{{item.voice_uri}}' controls="true">
                 
                 </audio>   
-              </view>
-              <view class='main-images' wx:if="{{item.cdn_img}}">
-                  <image src='{{item.cdn_img}}' mode='widthFix'></image>
               </view>
               <view class='main-video' wx:if="{{item.video_uri}}">
                   <video src="{{item.video_uri}}"   controls="true" ></video>
